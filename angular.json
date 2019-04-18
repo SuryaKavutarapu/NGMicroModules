@@ -7,7 +7,7 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "app",
+      "prefix": "ngmm",
       "schematics": {
         "@schematics/angular:component": {
           "style": "sass"
@@ -128,6 +128,111 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "contactus": {
+      "root": "projects/contactus",
+      "sourceRoot": "projects/contactus/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/contactus/tsconfig.lib.json",
+            "project": "projects/contactus/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/contactus/src/test.ts",
+            "tsConfig": "projects/contactus/tsconfig.spec.json",
+            "karmaConfig": "projects/contactus/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/contactus/tsconfig.lib.json",
+              "projects/contactus/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "datatable": {
+      "root": "projects/datatable",
+      "sourceRoot": "projects/datatable/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/datatable/tsconfig.lib.json",
+            "project": "projects/datatable/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/datatable/src/test.ts",
+            "tsConfig": "projects/datatable/tsconfig.spec.json",
+            "karmaConfig": "projects/datatable/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/datatable/tsconfig.lib.json",
+              "projects/datatable/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "notfound": {
+      "root": "projects/notfound",
+      "sourceRoot": "projects/notfound/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/notfound/tsconfig.lib.json",
+            "project": "projects/notfound/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/notfound/src/test.ts",
+            "tsConfig": "projects/notfound/tsconfig.spec.json",
+            "karmaConfig": "projects/notfound/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/notfound/tsconfig.lib.json",
+              "projects/notfound/tsconfig.spec.json"
+            ],
             "exclude": [
               "**/node_modules/**"
             ]

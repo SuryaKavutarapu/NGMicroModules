@@ -1,0 +1,26 @@
+<div class="ngnf-container">
+    <span class="ngnf-text">
+        <span *ngIf="data.statusCode; else defaultCode">
+            {{data.statusCode}}
+        </span>
+        <ng-template #defaultCode>
+            404
+        </ng-template>
+    </span>
+    <span class="ngnf-subtext">
+        <span *ngIf="data.title; else defaultTitle">
+            {{data.title}}
+        </span>
+        <ng-template #defaultTitle>
+            Page Not Found!
+        </ng-template>
+    </span>
+    <p class="ngnf-explanation">
+        <span *ngIf="data.message; else defaultMessage">
+            {{data.message}}
+        </span>
+        <ng-template #defaultMessage>
+            The link you clicked may be broken or the page may have been removed.
+        </ng-template>
+    </p>
+</div>

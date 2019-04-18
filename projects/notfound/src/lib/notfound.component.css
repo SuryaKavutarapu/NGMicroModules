@@ -1,0 +1,38 @@
+:root {
+    --ngnf-text-color: #cccccc;
+    --ngnf-subtext-color: #4a4a4a;
+    --ngnf-explanation-color: #000000;
+    --ngnf-font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif!important;
+}
+
+.ngnf-container {
+    width: 540px;
+    margin: 50px auto;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.5;
+    font-family: var(--ngnf-font-family);
+}
+
+.ngnf-text {
+    font-size: 11.8em;
+    display: block;
+    margin: 80px 0px 20px;
+    color:  var(--ngnf-text-color);
+    font-weight: bold;
+}
+
+.ngnf-subtext {
+    font-size: 2.8em;
+    display: block;
+    margin: 10px 0px 20px;
+    color:  var(--ngnf-subtext-color);
+}
+
+.ngnf-explanation {
+    font-size: 1em;
+    display: block;
+    margin: 10px auto 20px;
+    color:  var(--ngnf-explanation-color);
+    width: 400px;
+}

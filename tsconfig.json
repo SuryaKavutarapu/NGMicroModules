@@ -17,6 +17,26 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "contactus": [
+        "dist/contactus"
+      ],
+      "contactus/*": [
+        "dist/contactus/*"
+      ],
+      "datatable": [
+        "dist/datatable"
+      ],
+      "datatable/*": [
+        "dist/datatable/*"
+      ],
+      "notfound": [
+        "dist/notfound"
+      ],
+      "notfound/*": [
+        "dist/notfound/*"
+      ]
+    }
   }
 }
